@@ -16,7 +16,9 @@ public class Tictactoe{
     String strcontrols = ("blah");
     String str2player = ("blah");
     String str1player = ("blah");
-    
+    String strusername1;
+    String strusername2;
+
     while(strstart.equals ("blah")){
       con.println("");
       con.println("");
@@ -68,10 +70,43 @@ public class Tictactoe{
       chrkey = con.getChar ();
       if (chrkey == 'q'){
         con.clear();
-      
+        
       }else if(chrkey == 'w'){
         con.clear();
-      
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("What is you username player1?");
+        strusername1=con.readLine();
+        con.clear();
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("What is you username player2?");
+        strusername2=con.readLine();
+        con.clear();
       }else if(chrkey == 'e'){
         con.clear();
         while(strcontrols.equals ("blah")){
