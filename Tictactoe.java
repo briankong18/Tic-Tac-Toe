@@ -18,6 +18,7 @@ public class Tictactoe{
     String str1player = ("blah");
     String strusername1;
     String strusername2;
+    String strcheatcode = ("blah");
 
     while(strstart.equals ("blah")){
       con.println("");
@@ -107,6 +108,29 @@ public class Tictactoe{
         con.println("What is you username player2?");
         strusername2=con.readLine();
         con.clear();
+        while(strmenu.equals ("blah")){
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("                                                                                1player PvAI (click q)");
+        con.println("                                                                                2players PvP (click w)");
+        con.println("                                                                                  Controls (click e)");
+        con.println("                                                                                How to play (click r)");
+        con.println("                                                                              Credits and info (click t)");
+        chrkey = con.getChar ();
+        if (chrkey == 'q'){
+          con.clear();
       }else if(chrkey == 'e'){
         con.clear();
         while(strcontrols.equals ("blah")){
@@ -156,13 +180,13 @@ public class Tictactoe{
           con.println("");
           con.println("");
           con.println("          -The player must choose a mode to play on first");
-          con.println("          -The plater then chooses a username for themself and if thy are against a player then they'll insert there username as well");
-          con.println("          -A randomizer will deside who will get to choose first");
-          con.println("          -There is a three by three grid that will be drawn on the center of the screen and the user that is going will have there username writen on the top left corner");
-          con.println("          -The goal is to get 3 of your shape going in a line in a row, colum, or diagonal");
+          con.println("          -The player then chooses a username for themself and if they are against a player then they'll insert there username as well");
+          con.println("          -A randomizer will decide who will get to choose first");
+          con.println("          -There is a three by three grid that will be drawn on the center of the screen and the user that is going will have their username written on the top left corner");
+          con.println("          -The goal is to get 3 of your shape going in a line in a row, column, or diagonal");
           con.println("          -Who ever makes it first wins the game");
-          con.println("          -The game can be tied off if both players have not reached the goal of making a line thus leading the gameboard to clear and start over");
-          con.println("          -The player who goes first is normally offencive while the opponent goes defencive");
+          con.println("          -The game can be tied off if both players have not reached the goal of making a line thus leading the game board to clear and start over");
+          con.println("          -The player who goes first is normally offensive while the opponent goes defensive");
           con.println("          ");
           con.println("          ");
           con.println("          ");
@@ -210,7 +234,7 @@ public class Tictactoe{
           con.println("                                                                                     Version 0.01");
           con.println("                                                                                Date created:11/04/2017");
           con.println("                                                                                Date updated:12/04/2017");
-          con.println("");
+          con.println("                                                                                     Cheat (click c)");
           con.println("");
           con.println("");
           con.println("");
@@ -226,6 +250,53 @@ public class Tictactoe{
             con.clear();
             strcredits=("back");
             con.clear();
+          }else if (chrkey =='c'){
+            while(strcheatcode.equals ("blah")){
+              con.clear
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("");
+              con.println("What is the cheat code (use numberpad arrow keys)(click b enter to go back)");
+              strcheatcode=con.readline();
+              if (strcheatcode.equals ("88224646ab")){
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                           Whoever you are, you win");
+                strcredits=("end");
+                strmenu=("end");
+                strcheatcode=("end");
+              }else{
+                strcheatcode=("blah");
+              }
+              
           }else{
             con.clear();
           }
