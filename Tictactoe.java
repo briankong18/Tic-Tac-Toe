@@ -88,7 +88,7 @@ public class Tictactoe{
         con.println("");
         con.println("");
         con.println("");
-        con.println("What is you username player1?");
+        con.println("What is you username player1? (your o)");
         strusername1=con.readLine();
         con.clear();
         con.println("");
@@ -105,7 +105,7 @@ public class Tictactoe{
         con.println("");
         con.println("");
         con.println("");
-        con.println("What is you username player2?");
+        con.println("What is you username player2? (your x)");
         strusername2=con.readLine();
         con.clear();
         intrandturn = (int) (Math.random()*2+1);
@@ -125,9 +125,16 @@ public class Tictactoe{
           con.println("");
           con.println("");
           con.println("");
-          con.println("                                                                                "+strusername1+"'s turn");
-          pause(10000);
+          con.println("                                                                        "+strusername1+"'s turn (your o)");
+          pause(2000);
           con.clear();
+          con.println("Turn "+strusername1);
+          con.drawLine(400,290,1000,290);
+          con.drawLine(400,490,1000,490);
+          con.drawLine(600,90,600,690);
+          con.drawLine(800,90,800,690);
+          chrkey = con.getChar ();
+          if 
           
           chrkey = con.getChar ();
         }else if(intrandturn == 2){
@@ -146,9 +153,16 @@ public class Tictactoe{
           con.println("");
           con.println("");
           con.println("");
-          con.println("                                                                                "+strusername2+"'s turn");
-          pause(10000);
+          con.println("                                                                        "+strusername2+"'s turn (your x)");
+          pause(2000);
           con.clear();
+          con.println("Turn "+strusername2);
+          con.drawLine(400,290,1000,290);
+          con.drawLine(400,490,1000,490);
+          con.drawLine(600,90,600,690);
+          con.drawLine(800,90,800,690);
+          chrkey = con.getChar ();
+          
           
         }
         
