@@ -20,6 +20,27 @@ public class Tictactoe{
     String strusername2;
     String strcheatcode = ("blah");
     int intrandturn = 0;
+    char chrkey1;
+    char chrkey2;
+    int intchecklight7 = 0;
+    int intchecklight8 = 0;
+    int intchecklight9 = 0;
+    int intchecklight4 = 0;
+    int intchecklight5 = 0;
+    int intchecklight6 = 0;
+    int intchecklight1 = 0;
+    int intchecklight2 = 0;
+    int intchecklight3 = 0;
+    String strplayer1check = ("blah");
+    String strplayer2check = ("blah");
+    String str1playercheck = ("blah");
+    String strAIcheck = ("blah");
+    String str2playergameloop1 = ("blah");
+    String str2playergameloop2 = ("blah");
+    int intscorep1 = 0;
+    int intscorep2 = 0;
+    String strrestartgame2p = ("blah");
+    
     while(strstart.equals ("blah")){
       con.println("");
       con.println("");
@@ -107,64 +128,440 @@ public class Tictactoe{
         con.println("");
         con.println("What is you username player2? (your x)");
         strusername2=con.readLine();
+        while (strrestartgame2p.equals("restart")){
+          con.clear();
+          intrandturn = (int) (Math.random()*2+1);
+          if (intrandturn == 1){
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                        "+strusername1+"'s turn (your o)");
+            pause(2000);
+          
+            
+            
+            
+            
+            
+            con.clear();
+            con.println("Turn "+strusername1);
+            con.drawLine(400,290,1000,290);
+            con.drawLine(400,490,1000,490);
+            con.drawLine(600,90,600,690);
+            con.drawLine(800,90,800,690);
+            chrkey1 = con.getChar ();
+            while (str2playergameloop1.equals("blah")){
+              while (strplayer1check.equals("blah")){
+                if (chrkey1 == '7'){
+                  if (intchecklight7 == 0){
+                    intchecklight7 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '8'){
+                  if (intchecklight8 == 0){
+                    intchecklight8 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '9'){
+                  if (intchecklight9 == 0){
+                    intchecklight9 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '4'){
+                  if (intchecklight4 == 0){
+                    intchecklight4 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '5'){
+                  if (intchecklight5 == 0){
+                    intchecklight5 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '6'){
+                  if (intchecklight6 == 0){
+                    intchecklight6 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '1'){
+                  if (intchecklight1 == 0){
+                    intchecklight1 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '2'){
+                  if (intchecklight2 == 0){
+                    intchecklight2 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                  
+                }else if (chrkey1 == '3'){
+                  if (intchecklight3== 0){
+                    intchecklight3 = 1;
+                    strplayer1check = ("exit");
+                  }else{
+                    chrkey1 = con.getChar ();
+                  }
+                }
+              }
+              strplayer1check= ("blah");
+              
+              con.clear();
+              con.println("Turn "+strusername2);
+              con.drawLine(400,290,1000,290);
+              con.drawLine(400,490,1000,490);
+              con.drawLine(600,90,600,690);
+              con.drawLine(800,90,800,690);
+              
+              if (intchecklight7 = 1){
+                con.drawOval(425,115,150,150);
+              }
+              if (intchecklight8 = 1){
+                con.drawOval(625,115,150,150);
+              } 
+              if (intchecklight9 = 1){
+                con.drawOval(825,115,150,150);
+            }
+            if (intchecklight4 = 1){
+              con.drawOval(425,315,150,150);
+            }
+            if (intchecklight5 = 1){
+              con.drawOval(625,315,150,150);
+              }
+              if (intchecklight6 = 1){
+                con.drawOval(825,315,150,150);
+              }
+              if (intchecklight1 = 1){
+                con.drawOval(425,515,150,150);
+              }
+              if (intchecklight2 = 1){
+                con.drawOval(625,515,150,150);
+              }
+              if (intchecklight3 = 1){
+                con.drawOval(825,515,150,150);
+              }
+              
+              
+              
+              if (intchecklight7 = 2){
+                con.drawLine(425,115,575,265);
+                con.drawLine(575,115,425,265);
+              }
+              if (intchecklight8 = 2){
+                con.drawLine(625,115,775,265);
+                con.drawLine(775,115,625,265);
+              } 
+              if (intchecklight9 = 2){
+                con.drawLine(825,115,975,265);
+                con.drawLine(975,115,825,265);
+              }
+              if (intchecklight4 = 2){
+                con.drawLine(425,315,575,465);
+                con.drawLine(575,315,425,465);
+              }
+              if (intchecklight5 = 2){
+                con.drawLine(625,315,775,465);
+                con.drawLine(775,315,625,465);
+              }
+              if (intchecklight6 = 2){
+                con.drawLine(825,315,975,465);
+                con.drawLine(975,315,825,465);
+              }
+              if (intchecklight1 = 2){
+                con.drawLine(425,515,575,665);
+                con.drawLine(575,515,425,665);
+              }
+              if (intchecklight2 = 2){
+                con.drawLine(625,515,775,665);
+                con.drawLine(775,515,625,665);
+              }
+              if (intchecklight3 = 2){
+                con.drawLine(825,515,975,665);
+                con.drawLine(975,515,825,665);
+              }
+            
+              
+            
+            
+            
+              
+              
+              
+              chrkey2 = con.getChar ();
+              
+              
+              while (strplayer2check.equals("blah")){
+                if (chrkey2 == '7'){
+                  if (intchecklight7 == 0){
+                    intchecklight7 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                  
+                }else if (chrkey2 == '8'){
+                  if (intchecklight8 == 0){
+                    intchecklight8 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                  
+                }else if (chrkey2 == '9'){
+                  if (intchecklight9 == 0){
+                    intchecklight9 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                  
+                }else if (chrkey2 == '4'){
+                  if (intchecklight4 == 0){
+                    intchecklight4 = 1;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                
+                }else if (chrkey2 == '5'){
+                  if (intchecklight5 == 0){
+                    intchecklight5 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                   
+                }else if (chrkey2 == '6'){
+                    if (intchecklight6 == 0){
+                    intchecklight6 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                
+                }else if (chrkey2 == '1'){
+                  if (intchecklight1 == 0){
+                    intchecklight1 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                  
+                }else if (chrkey2 == '2'){
+                   if (intchecklight2 == 0){
+                    intchecklight2 = 2;
+                    strplayer2check = ("exit");
+                   }else{
+                    chrkey2 = con.getChar ();
+                   }
+                   
+                }else if (chrkey2 == '3'){
+                  if (intchecklight3== 0){
+                    intchecklight3 = 2;
+                    strplayer2check = ("exit");
+                  }else{
+                    chrkey2 = con.getChar ();
+                  }
+                }
+              }
+              strplayer2check= ("blah");
+              
+              con.clear();
+              con.println("Turn "+strusername1);
+              con.drawLine(400,290,1000,290);
+              con.drawLine(400,490,1000,490);
+              con.drawLine(600,90,600,690);
+              con.drawLine(800,90,800,690);
+              
+              if (intchecklight7 = 1){
+                con.drawOval(425,115,150,150);
+              }
+              if (intchecklight8 = 1){
+                con.drawOval(625,115,150,150);
+               } 
+              if (intchecklight9 = 1){
+                con.drawOval(825,115,150,150);
+              }
+              if (intchecklight4 = 1){
+                con.drawOval(425,315,150,150);
+              }
+              if (intchecklight5 = 1){
+                con.drawOval(625,315,150,150);
+              }
+              if (intchecklight6 = 1){
+                con.drawOval(825,315,150,150);
+              }
+              if (intchecklight1 = 1){
+                con.drawOval(425,515,150,150);  
+              }
+              if (intchecklight2 = 1){
+                con.drawOval(625,515,150,150);
+              }
+              if (intchecklight3 = 1){
+                con.drawOval(825,515,150,150);
+              }
+              
+            
+            
+                if (intchecklight7 = 2){
+                con.drawLine(425,115,575,265);
+                con.drawLine(575,115,425,265);
+              }
+              if (intchecklight8 = 2){
+                con.drawLine(625,115,775,265);
+                con.drawLine(775,115,625,265);
+              } 
+              if (intchecklight9 = 2){
+                con.drawLine(825,115,975,265);
+                con.drawLine(975,115,825,265);
+              }
+              if (intchecklight4 = 2){
+                con.drawLine(425,315,575,465);
+                con.drawLine(575,315,425,465);
+              }
+              if (intchecklight5 = 2){
+                con.drawLine(625,315,775,465);
+                con.drawLine(775,315,625,465);
+              }
+              if (intchecklight6 = 2){
+                con.drawLine(825,315,975,465);
+                con.drawLine(975,315,825,465);
+              }
+              if (intchecklight1 = 2){
+                con.drawLine(425,515,575,665);
+                con.drawLine(575,515,425,665);
+              }
+              if (intchecklight2 = 2){
+                con.drawLine(625,515,775,665);
+                con.drawLine(775,515,625,665);
+              }
+              if (intchecklight3 = 2){
+                con.drawLine(825,515,975,665);
+                con.drawLine(975,515,825,665);
+              }
+            
+              if (intchecklight7 = 1&& intchecklight8 = 1 &&intchecklight9 = 1){
+                intscorep1=intscore+1;
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }
+               
+               
+               
+              chrkey1 = con.getChar ();
+            }
+                
+          
+          
+          
+          
+          
+          }else if(intrandturn == 2){
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                        "+strusername2+"'s turn (your x)");
+            pause(2000);
+            con.clear();
+            con.println("Turn "+strusername2);
+            con.drawLine(400,290,1000,290);
+            con.drawLine(400,490,1000,490);
+            con.drawLine(600,90,600,690); 
+            con.drawLine(800,90,800,690);
+            chrkey2 = con.getChar ();
+          
+          
+          }
         con.clear();
-        intrandturn = (int) (Math.random()*2+1);
-        if (intrandturn == 1){
-          con.clear();
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("                                                                        "+strusername1+"'s turn (your o)");
-          pause(2000);
-          con.clear();
-          con.println("Turn "+strusername1);
-          con.drawLine(400,290,1000,290);
-          con.drawLine(400,490,1000,490);
-          con.drawLine(600,90,600,690);
-          con.drawLine(800,90,800,690);
-          chrkey = con.getChar ();
-          if 
-          
-          chrkey = con.getChar ();
-        }else if(intrandturn == 2){
-          con.clear();
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("");
-          con.println("                                                                        "+strusername2+"'s turn (your x)");
-          pause(2000);
-          con.clear();
-          con.println("Turn "+strusername2);
-          con.drawLine(400,290,1000,290);
-          con.drawLine(400,490,1000,490);
-          con.drawLine(600,90,600,690);
-          con.drawLine(800,90,800,690);
-          chrkey = con.getChar ();
-          
-          
-        }
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("                                                                                       click k to play again");
+        con.println("                                                                                         click b to go back");
+        chrkey = con.getChar ();
+        if (chrkey == 'k'){
+          strrestartgame2p = ("restart");
+        }else if (chrkey== 'b'){
+          strrestartgame2p = ("blah");
+        } 
+      }
+        
+        
+        
+        
+        
         
       }else if(chrkey == 'e'){
         con.clear();
