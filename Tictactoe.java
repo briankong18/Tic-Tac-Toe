@@ -1,8 +1,8 @@
 //Tic Tac Toe
-//Version
-//Created by:
-//Date created:
-//Last update:
+//Version 1
+//Created by: Brian Konng
+//Date created: 11/04/2017
+//Last update: 25/04/2017
 
 import hsa.*;
 public class Tictactoe{
@@ -14,14 +14,15 @@ public class Tictactoe{
     String strcredits = ("blah");
     String strhow = ("blah");
     String strcontrols = ("blah");
-    String str2player = ("blah");
-    String str1player = ("blah");
+    String strusername;
     String strusername1;
     String strusername2;
     String strcheatcode = ("blah");
     int intrandturn = 0;
+    int intrandai = 0;
     char chrkey1;
     char chrkey2;
+    char chrkey3;
     int intchecklight7 = 0;
     int intchecklight8 = 0;
     int intchecklight9 = 0;
@@ -33,13 +34,21 @@ public class Tictactoe{
     int intchecklight3 = 0;
     String strplayer1check = ("blah");
     String strplayer2check = ("blah");
-    String str1playercheck = ("blah");
-    String strAIcheck = ("blah");
+    String strplayercheck = ("blah");
+    String straicheck = ("blah");
     String str2playergameloop1 = ("blah");
     String str2playergameloop2 = ("blah");
+    String str1playergameloop1 = ("blah");
+    String str1playergameloop2 = ("blah");
     int intscorep1 = 0;
     int intscorep2 = 0;
-    String strrestartgame2p = ("blah");
+    int intscorep = 0;
+    int intscoreai = 0;
+    String strrestartgame2p = ("restart");
+    String strrestartgame2ploop = ("blah");
+    String strrestartgame1p = ("restart");
+    String strrestartgame1ploop = ("blah");
+    
     
     while(strstart.equals ("blah")){
       con.println("");
@@ -91,9 +100,2193 @@ public class Tictactoe{
       con.println("                                                                              Credits and info (click t)");
       chrkey = con.getChar ();
       if (chrkey == 'q'){
+        strrestartgame1ploop= ("blah");
+        strrestartgame1p = ("restart");
         con.clear();
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("");
+        con.println("What is you username player? (your o)");
+        strusername=con.readLine();
+        while (strrestartgame1p.equals("restart")){
+          strrestartgame1ploop= ("blah");
+          strrestartgame1p = ("restart");
+          con.clear();
+          intrandturn = (int) (Math.random()*2+1);
+          if (intrandturn == 1){
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                        "+strusername+"'s turn (your o)");
+            pause(2000);
+            
+            
+            
+            con.clear();
+            con.println("Turn "+strusername+"  O");
+            con.drawLine(400,290,1000,290);
+            con.drawLine(400,490,1000,490);
+            con.drawLine(600,90,600,690);
+            con.drawLine(800,90,800,690);
+            chrkey3 = con.getChar ();
+            while (str1playergameloop1.equals("blah")){
+              while (strplayercheck.equals("blah")){
+                if (chrkey3 == '7'){
+                  if (intchecklight7 == 0){
+                    intchecklight7 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '8'){
+                  if (intchecklight8 == 0){
+                    intchecklight8 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '9'){
+                  if (intchecklight9 == 0){
+                    intchecklight9 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '4'){
+                  if (intchecklight4 == 0){
+                    intchecklight4 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '5'){
+                  if (intchecklight5 == 0){
+                    intchecklight5 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '6'){
+                  if (intchecklight6 == 0){
+                    intchecklight6 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '1'){
+                  if (intchecklight1 == 0){
+                    intchecklight1 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '2'){
+                  if (intchecklight2 == 0){
+                    intchecklight2 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                  
+                }else if (chrkey3 == '3'){
+                  if (intchecklight3== 0){
+                    intchecklight3 = 1;
+                    strplayercheck = ("exit");
+                  }else{
+                    chrkey3 = con.getChar ();
+                  }
+                }
+              }
+              strplayercheck= ("blah");
+              
+              con.clear();
+              con.println("Turn AI  X");
+              con.drawLine(400,290,1000,290);
+              con.drawLine(400,490,1000,490);
+              con.drawLine(600,90,600,690);
+              con.drawLine(800,90,800,690);
+              
+              if (intchecklight7 == 1){
+                con.drawOval(425,115,150,150);
+              }
+              if (intchecklight8 == 1){
+                con.drawOval(625,115,150,150);
+              } 
+              if (intchecklight9 == 1){
+                con.drawOval(825,115,150,150);
+              }
+              if (intchecklight4 == 1){
+                con.drawOval(425,315,150,150);
+              }
+              if (intchecklight5 == 1){
+                con.drawOval(625,315,150,150);
+              }
+              if (intchecklight6 == 1){
+                con.drawOval(825,315,150,150);
+              }
+              if (intchecklight1 == 1){
+                con.drawOval(425,515,150,150);
+              }
+              if (intchecklight2 == 1){
+                con.drawOval(625,515,150,150);
+              }
+              if (intchecklight3 == 1){
+                con.drawOval(825,515,150,150);
+              }
+              
+              
+              
+              if (intchecklight7 == 2){
+                con.drawLine(425,115,575,265);
+                con.drawLine(575,115,425,265);
+              }
+              if (intchecklight8 == 2){
+                con.drawLine(625,115,775,265);
+                con.drawLine(775,115,625,265);
+              } 
+              if (intchecklight9 == 2){
+                con.drawLine(825,115,975,265);
+                con.drawLine(975,115,825,265);
+              }
+              if (intchecklight4 == 2){
+                con.drawLine(425,315,575,465);
+                con.drawLine(575,315,425,465);
+              }
+              if (intchecklight5 == 2){
+                con.drawLine(625,315,775,465);
+                con.drawLine(775,315,625,465);
+              }
+              if (intchecklight6 == 2){
+                con.drawLine(825,315,975,465);
+                con.drawLine(975,315,825,465);
+              }
+              if (intchecklight1 == 2){
+                con.drawLine(425,515,575,665);
+                con.drawLine(575,515,425,665);
+              }
+              if (intchecklight2 == 2){
+                con.drawLine(625,515,775,665);
+                con.drawLine(775,515,625,665);
+              }
+              if (intchecklight3 == 2){
+                con.drawLine(825,515,975,665);
+                con.drawLine(975,515,825,665);
+              }
+              
+              
+              
+              if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop1=("end game");
+              }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                    Tie");
+                str1playergameloop1=("end game");
+              }else{
+                
+                
+                
+                
+                intrandai = (int) (Math.random()*9+1);
+                
+                
+                while (straicheck.equals("blah")){
+                  if (intrandai == 7){
+                    if (intchecklight7 == 0){
+                      intchecklight7 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 8){
+                    if (intchecklight8 == 0){
+                      intchecklight8 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 9){
+                    if (intchecklight9 == 0){
+                      intchecklight9 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 4){
+                    if (intchecklight4 == 0){
+                      intchecklight4 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 5){
+                    if (intchecklight5 == 0){
+                      intchecklight5 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 6){
+                    if (intchecklight6 == 0){
+                      intchecklight6 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 1){
+                    if (intchecklight1 == 0){
+                      intchecklight1 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 2){
+                    if (intchecklight2 == 0){
+                      intchecklight2 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                    
+                  }else if (intrandai == 3){
+                    if (intchecklight3== 0){
+                      intchecklight3 = 2;
+                      straicheck = ("exit");
+                    }else{
+                      intrandai = (int) (Math.random()*9+1);
+                    }
+                  }
+                }
+                straicheck= ("blah");
+                
+                con.clear();
+                con.println("Turn "+strusername+"  O");
+                con.drawLine(400,290,1000,290);
+                con.drawLine(400,490,1000,490);
+                con.drawLine(600,90,600,690);
+                con.drawLine(800,90,800,690);
+                
+                if (intchecklight7 == 1){
+                  con.drawOval(425,115,150,150);
+                }
+                if (intchecklight8 == 1){
+                  con.drawOval(625,115,150,150);
+                } 
+                if (intchecklight9 == 1){
+                  con.drawOval(825,115,150,150);
+                }
+                if (intchecklight4 == 1){
+                  con.drawOval(425,315,150,150);
+                }
+                if (intchecklight5 == 1){
+                  con.drawOval(625,315,150,150);
+                }
+                if (intchecklight6 == 1){
+                  con.drawOval(825,315,150,150);
+                }
+                if (intchecklight1 == 1){
+                  con.drawOval(425,515,150,150);  
+                }
+                if (intchecklight2 == 1){
+                  con.drawOval(625,515,150,150);
+                }
+                if (intchecklight3 == 1){
+                  con.drawOval(825,515,150,150);
+                }
+                
+                
+                
+                if (intchecklight7 == 2){
+                  con.drawLine(425,115,575,265);
+                  con.drawLine(575,115,425,265);
+                }
+                if (intchecklight8 == 2){
+                  con.drawLine(625,115,775,265);
+                  con.drawLine(775,115,625,265);
+                } 
+                if (intchecklight9 == 2){
+                  con.drawLine(825,115,975,265);
+                  con.drawLine(975,115,825,265);
+                }
+                if (intchecklight4 == 2){
+                  con.drawLine(425,315,575,465);
+                  con.drawLine(575,315,425,465);
+                }
+                if (intchecklight5 == 2){
+                  con.drawLine(625,315,775,465);
+                  con.drawLine(775,315,625,465);
+                }
+                if (intchecklight6 == 2){
+                  con.drawLine(825,315,975,465);
+                  con.drawLine(975,315,825,465);
+                }
+                if (intchecklight1 == 2){
+                  con.drawLine(425,515,575,665);
+                  con.drawLine(575,515,425,665);
+                }
+                if (intchecklight2 == 2){
+                  con.drawLine(625,515,775,665);
+                  con.drawLine(775,515,625,665);
+                }
+                if (intchecklight3 == 2){
+                  con.drawLine(825,515,975,665);
+                  con.drawLine(975,515,825,665);
+                }
+                
+                
+                
+                
+                if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop1=("end game");
+                }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                    Tie");
+                  str1playergameloop1=("end game");
+                }else{
+                  chrkey3 = con.getChar ();
+                }
+              }
+            }
+          }else if(intrandturn == 2){
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                               AI's turn (your x)");
+            pause(2000);
+            con.clear();
+            con.println("Turn AI  X");
+            con.drawLine(400,290,1000,290);
+            con.drawLine(400,490,1000,490);
+            con.drawLine(600,90,600,690); 
+            con.drawLine(800,90,800,690);
+            intrandai = (int) (Math.random()*9+1);
+            
+            while (str1playergameloop2.equals("blah")){
+              while (straicheck.equals("blah")){
+                if (intrandai == 7){
+                  if (intchecklight7 == 0){
+                    intchecklight7 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 8){
+                  if (intchecklight8 == 0){
+                    intchecklight8 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 9){
+                  if (intchecklight9 == 0){
+                    intchecklight9 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 4){
+                  if (intchecklight4 == 0){
+                    intchecklight4 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 5){
+                  if (intchecklight5 == 0){
+                    intchecklight5 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 6){
+                  if (intchecklight6 == 0){
+                    intchecklight6 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 1){
+                  if (intchecklight1 == 0){
+                    intchecklight1 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 2){
+                  if (intchecklight2 == 0){
+                    intchecklight2 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                  
+                }else if (intrandai == 3){
+                  if (intchecklight3== 0){
+                    intchecklight3 = 2;
+                    straicheck = ("exit");
+                  }else{
+                    intrandai = (int) (Math.random()*9+1);
+                  }
+                }
+              }
+              straicheck= ("blah");
+              
+              con.clear();
+              con.println("Turn "+strusername+"  O");
+              con.drawLine(400,290,1000,290);
+              con.drawLine(400,490,1000,490);
+              con.drawLine(600,90,600,690);
+              con.drawLine(800,90,800,690);
+              
+              if (intchecklight7 == 1){
+                con.drawOval(425,115,150,150);
+              }
+              if (intchecklight8 == 1){
+                con.drawOval(625,115,150,150);
+              } 
+              if (intchecklight9 == 1){
+                con.drawOval(825,115,150,150);
+              }
+              if (intchecklight4 == 1){
+                con.drawOval(425,315,150,150);
+              }
+              if (intchecklight5 == 1){
+                con.drawOval(625,315,150,150);
+              }
+              if (intchecklight6 == 1){
+                con.drawOval(825,315,150,150);
+              }
+              if (intchecklight1 == 1){
+                con.drawOval(425,515,150,150);
+              }
+              if (intchecklight2 == 1){
+                con.drawOval(625,515,150,150);
+              }
+              if (intchecklight3 == 1){
+                con.drawOval(825,515,150,150);
+              }
+              
+              
+              
+              if (intchecklight7 == 2){
+                con.drawLine(425,115,575,265);
+                con.drawLine(575,115,425,265);
+              }
+              if (intchecklight8 == 2){
+                con.drawLine(625,115,775,265);
+                con.drawLine(775,115,625,265);
+              } 
+              if (intchecklight9 == 2){
+                con.drawLine(825,115,975,265);
+                con.drawLine(975,115,825,265);
+              }
+              if (intchecklight4 == 2){
+                con.drawLine(425,315,575,465);
+                con.drawLine(575,315,425,465);
+              }
+              if (intchecklight5 == 2){
+                con.drawLine(625,315,775,465);
+                con.drawLine(775,315,625,465);
+              }
+              if (intchecklight6 == 2){
+                con.drawLine(825,315,975,465);
+                con.drawLine(975,315,825,465);
+              }
+              if (intchecklight1 == 2){
+                con.drawLine(425,515,575,665);
+                con.drawLine(575,515,425,665);
+              }
+              if (intchecklight2 == 2){
+                con.drawLine(625,515,775,665);
+                con.drawLine(775,515,625,665);
+              }
+              if (intchecklight3 == 2){
+                con.drawLine(825,515,975,665);
+                con.drawLine(975,515,825,665);
+              }
+              
+              
+              
+              if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                intscorep=intscorep+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername+" win");
+                con.println("                                                                             score: "+intscorep);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                intscoreai=intscoreai+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                   AI win");
+                con.println("                                                                             score: "+intscoreai);
+                str1playergameloop2=("end game");
+              }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                    Tie");
+                str1playergameloop2=("end game");
+              }else{
+                
+                
+                
+                
+                chrkey3 = con.getChar ();
+                
+                
+                while (strplayercheck.equals("blah")){
+                  if (chrkey3 == '7'){
+                    if (intchecklight7 == 0){
+                      intchecklight7 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '8'){
+                    if (intchecklight8 == 0){
+                      intchecklight8 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '9'){
+                    if (intchecklight9 == 0){
+                      intchecklight9 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '4'){
+                    if (intchecklight4 == 0){
+                      intchecklight4 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '5'){
+                    if (intchecklight5 == 0){
+                      intchecklight5 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '6'){
+                    if (intchecklight6 == 0){
+                      intchecklight6 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '1'){
+                    if (intchecklight1 == 0){
+                      intchecklight1 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '2'){
+                    if (intchecklight2 == 0){
+                      intchecklight2 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey3 == '3'){
+                    if (intchecklight3== 0){
+                      intchecklight3 = 1;
+                      strplayercheck = ("exit");
+                    }else{
+                      chrkey3 = con.getChar ();
+                    }
+                  }
+                }
+                strplayercheck= ("blah");
+                
+                con.clear();
+                con.println("Turn AI  X");
+                con.drawLine(400,290,1000,290);
+                con.drawLine(400,490,1000,490);
+                con.drawLine(600,90,600,690);
+                con.drawLine(800,90,800,690);
+                
+                if (intchecklight7 == 1){
+                  con.drawOval(425,115,150,150);
+                }
+                if (intchecklight8 == 1){
+                  con.drawOval(625,115,150,150);
+                } 
+                if (intchecklight9 == 1){
+                  con.drawOval(825,115,150,150);
+                }
+                if (intchecklight4 == 1){
+                  con.drawOval(425,315,150,150);
+                }
+                if (intchecklight5 == 1){
+                  con.drawOval(625,315,150,150);
+                }
+                if (intchecklight6 == 1){
+                  con.drawOval(825,315,150,150);
+                }
+                if (intchecklight1 == 1){
+                  con.drawOval(425,515,150,150);  
+                }
+                if (intchecklight2 == 1){
+                  con.drawOval(625,515,150,150);
+                }
+                if (intchecklight3 == 1){
+                  con.drawOval(825,515,150,150);
+                }
+                
+                
+                
+                if (intchecklight7 == 2){
+                  con.drawLine(425,115,575,265);
+                  con.drawLine(575,115,425,265);
+                }
+                if (intchecklight8 == 2){
+                  con.drawLine(625,115,775,265);
+                  con.drawLine(775,115,625,265);
+                } 
+                if (intchecklight9 == 2){
+                  con.drawLine(825,115,975,265);
+                  con.drawLine(975,115,825,265);
+                }
+                if (intchecklight4 == 2){
+                  con.drawLine(425,315,575,465);
+                  con.drawLine(575,315,425,465);
+                }
+                if (intchecklight5 == 2){
+                  con.drawLine(625,315,775,465);
+                  con.drawLine(775,315,625,465);
+                }
+                if (intchecklight6 == 2){
+                  con.drawLine(825,315,975,465);
+                  con.drawLine(975,315,825,465);
+                }
+                if (intchecklight1 == 2){
+                  con.drawLine(425,515,575,665);
+                  con.drawLine(575,515,425,665);
+                }
+                if (intchecklight2 == 2){
+                  con.drawLine(625,515,775,665);
+                  con.drawLine(775,515,625,665);
+                }
+                if (intchecklight3 == 2){
+                  con.drawLine(825,515,975,665);
+                  con.drawLine(975,515,825,665);
+                }
+                
+                
+                
+                
+                if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                  intscorep=intscorep+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername+" win");
+                  con.println("                                                                             score: "+intscorep);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                  intscoreai=intscoreai+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                   AI win");
+                  con.println("                                                                             score: "+intscoreai);
+                  str1playergameloop2=("end game");
+                }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                    Tie");
+                  str1playergameloop2=("end game");
+                }else{
+                  intrandai = (int) (Math.random()*9+1);
+                }
+              }
+            }
+            
+          }
+          pause(5000);
+          while (strrestartgame1ploop.equals ("blah")){
+            strplayercheck= ("blah");
+            straicheck= ("blah");
+            str1playergameloop1=("blah");
+            str1playergameloop2=("blah");
+            intchecklight7=0;
+            intchecklight8=0;
+            intchecklight9=0;
+            intchecklight4=0;
+            intchecklight5=0;
+            intchecklight6=0;
+            intchecklight1=0;
+            intchecklight2=0;
+            intchecklight3=0;
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                                       click k to play again");
+            con.println("                                                                                     click b to go backto menu");
+            chrkey = con.getChar ();
+            if (chrkey == 'k'){
+              strrestartgame1p = ("restart");
+              strrestartgame1ploop= ("end");
+            }else if (chrkey== 'b'){
+              strrestartgame1p = ("blah");
+              strrestartgame1ploop= ("end");
+              intscorep=0;
+              intscoreai=0; 
+            } 
+          }
+        }
+
         
-      }else if(chrkey == 'w'){
+      } else if(chrkey == 'w'){
+        strrestartgame2ploop= ("blah");
+        strrestartgame2p = ("restart");
         con.clear();
         con.println("");
         con.println("");
@@ -129,6 +2322,8 @@ public class Tictactoe{
         con.println("What is you username player2? (your x)");
         strusername2=con.readLine();
         while (strrestartgame2p.equals("restart")){
+          strrestartgame2ploop= ("blah");
+          strrestartgame2p = ("restart");
           con.clear();
           intrandturn = (int) (Math.random()*2+1);
           if (intrandturn == 1){
@@ -149,14 +2344,11 @@ public class Tictactoe{
             con.println("");
             con.println("                                                                        "+strusername1+"'s turn (your o)");
             pause(2000);
-          
-            
-            
             
             
             
             con.clear();
-            con.println("Turn "+strusername1);
+            con.println("Turn "+strusername1+"  O");
             con.drawLine(400,290,1000,290);
             con.drawLine(400,490,1000,490);
             con.drawLine(600,90,600,690);
@@ -240,89 +2432,984 @@ public class Tictactoe{
               strplayer1check= ("blah");
               
               con.clear();
-              con.println("Turn "+strusername2);
+              con.println("Turn "+strusername2+"  X");
               con.drawLine(400,290,1000,290);
               con.drawLine(400,490,1000,490);
               con.drawLine(600,90,600,690);
               con.drawLine(800,90,800,690);
               
-              if (intchecklight7 = 1){
+              if (intchecklight7 == 1){
                 con.drawOval(425,115,150,150);
               }
-              if (intchecklight8 = 1){
+              if (intchecklight8 == 1){
                 con.drawOval(625,115,150,150);
               } 
-              if (intchecklight9 = 1){
+              if (intchecklight9 == 1){
                 con.drawOval(825,115,150,150);
-            }
-            if (intchecklight4 = 1){
-              con.drawOval(425,315,150,150);
-            }
-            if (intchecklight5 = 1){
-              con.drawOval(625,315,150,150);
               }
-              if (intchecklight6 = 1){
+              if (intchecklight4 == 1){
+                con.drawOval(425,315,150,150);
+              }
+              if (intchecklight5 == 1){
+                con.drawOval(625,315,150,150);
+              }
+              if (intchecklight6 == 1){
                 con.drawOval(825,315,150,150);
               }
-              if (intchecklight1 = 1){
+              if (intchecklight1 == 1){
                 con.drawOval(425,515,150,150);
               }
-              if (intchecklight2 = 1){
+              if (intchecklight2 == 1){
                 con.drawOval(625,515,150,150);
               }
-              if (intchecklight3 = 1){
+              if (intchecklight3 == 1){
                 con.drawOval(825,515,150,150);
               }
               
               
               
-              if (intchecklight7 = 2){
+              if (intchecklight7 == 2){
                 con.drawLine(425,115,575,265);
                 con.drawLine(575,115,425,265);
               }
-              if (intchecklight8 = 2){
+              if (intchecklight8 == 2){
                 con.drawLine(625,115,775,265);
                 con.drawLine(775,115,625,265);
               } 
-              if (intchecklight9 = 2){
+              if (intchecklight9 == 2){
                 con.drawLine(825,115,975,265);
                 con.drawLine(975,115,825,265);
               }
-              if (intchecklight4 = 2){
+              if (intchecklight4 == 2){
                 con.drawLine(425,315,575,465);
                 con.drawLine(575,315,425,465);
               }
-              if (intchecklight5 = 2){
+              if (intchecklight5 == 2){
                 con.drawLine(625,315,775,465);
                 con.drawLine(775,315,625,465);
               }
-              if (intchecklight6 = 2){
+              if (intchecklight6 == 2){
                 con.drawLine(825,315,975,465);
                 con.drawLine(975,315,825,465);
               }
-              if (intchecklight1 = 2){
+              if (intchecklight1 == 2){
                 con.drawLine(425,515,575,665);
                 con.drawLine(575,515,425,665);
               }
-              if (intchecklight2 = 2){
+              if (intchecklight2 == 2){
                 con.drawLine(625,515,775,665);
                 con.drawLine(775,515,625,665);
               }
-              if (intchecklight3 = 2){
+              if (intchecklight3 == 2){
                 con.drawLine(825,515,975,665);
                 con.drawLine(975,515,825,665);
               }
-            
-              
-            
-            
-            
               
               
               
-              chrkey2 = con.getChar ();
-              
-              
+              if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop1=("end game");
+              }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                    Tie");
+                str2playergameloop1=("end game");
+              }else{
+                
+                
+                
+                
+                chrkey2 = con.getChar ();
+                
+                
+                while (strplayer2check.equals("blah")){
+                  if (chrkey2 == '7'){
+                    if (intchecklight7 == 0){
+                      intchecklight7 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '8'){
+                    if (intchecklight8 == 0){
+                      intchecklight8 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '9'){
+                    if (intchecklight9 == 0){
+                      intchecklight9 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '4'){
+                    if (intchecklight4 == 0){
+                      intchecklight4 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '5'){
+                    if (intchecklight5 == 0){
+                      intchecklight5 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '6'){
+                    if (intchecklight6 == 0){
+                      intchecklight6 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '1'){
+                    if (intchecklight1 == 0){
+                      intchecklight1 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '2'){
+                    if (intchecklight2 == 0){
+                      intchecklight2 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey2 == '3'){
+                    if (intchecklight3== 0){
+                      intchecklight3 = 2;
+                      strplayer2check = ("exit");
+                    }else{
+                      chrkey2 = con.getChar ();
+                    }
+                  }
+                }
+                strplayer2check= ("blah");
+                
+                con.clear();
+                con.println("Turn "+strusername1+"  O");
+                con.drawLine(400,290,1000,290);
+                con.drawLine(400,490,1000,490);
+                con.drawLine(600,90,600,690);
+                con.drawLine(800,90,800,690);
+                
+                if (intchecklight7 == 1){
+                  con.drawOval(425,115,150,150);
+                }
+                if (intchecklight8 == 1){
+                  con.drawOval(625,115,150,150);
+                } 
+                if (intchecklight9 == 1){
+                  con.drawOval(825,115,150,150);
+                }
+                if (intchecklight4 == 1){
+                  con.drawOval(425,315,150,150);
+                }
+                if (intchecklight5 == 1){
+                  con.drawOval(625,315,150,150);
+                }
+                if (intchecklight6 == 1){
+                  con.drawOval(825,315,150,150);
+                }
+                if (intchecklight1 == 1){
+                  con.drawOval(425,515,150,150);  
+                }
+                if (intchecklight2 == 1){
+                  con.drawOval(625,515,150,150);
+                }
+                if (intchecklight3 == 1){
+                  con.drawOval(825,515,150,150);
+                }
+                
+                
+                
+                if (intchecklight7 == 2){
+                  con.drawLine(425,115,575,265);
+                  con.drawLine(575,115,425,265);
+                }
+                if (intchecklight8 == 2){
+                  con.drawLine(625,115,775,265);
+                  con.drawLine(775,115,625,265);
+                } 
+                if (intchecklight9 == 2){
+                  con.drawLine(825,115,975,265);
+                  con.drawLine(975,115,825,265);
+                }
+                if (intchecklight4 == 2){
+                  con.drawLine(425,315,575,465);
+                  con.drawLine(575,315,425,465);
+                }
+                if (intchecklight5 == 2){
+                  con.drawLine(625,315,775,465);
+                  con.drawLine(775,315,625,465);
+                }
+                if (intchecklight6 == 2){
+                  con.drawLine(825,315,975,465);
+                  con.drawLine(975,315,825,465);
+                }
+                if (intchecklight1 == 2){
+                  con.drawLine(425,515,575,665);
+                  con.drawLine(575,515,425,665);
+                }
+                if (intchecklight2 == 2){
+                  con.drawLine(625,515,775,665);
+                  con.drawLine(775,515,625,665);
+                }
+                if (intchecklight3 == 2){
+                  con.drawLine(825,515,975,665);
+                  con.drawLine(975,515,825,665);
+                }
+                
+                
+                
+                
+                if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                    Tie");
+                  str2playergameloop1=("end game");
+                }else{
+                  chrkey1 = con.getChar ();
+                }
+              }
+            }
+          }else if(intrandturn == 2){
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                        "+strusername2+"'s turn (your x)");
+            pause(2000);
+            con.clear();
+            con.println("Turn "+strusername2+"  X");
+            con.drawLine(400,290,1000,290);
+            con.drawLine(400,490,1000,490);
+            con.drawLine(600,90,600,690); 
+            con.drawLine(800,90,800,690);
+            chrkey2 = con.getChar ();
+            while (str2playergameloop2.equals("blah")){
               while (strplayer2check.equals("blah")){
                 if (chrkey2 == '7'){
                   if (intchecklight7 == 0){
@@ -350,12 +3437,12 @@ public class Tictactoe{
                   
                 }else if (chrkey2 == '4'){
                   if (intchecklight4 == 0){
-                    intchecklight4 = 1;
+                    intchecklight4 = 2;
                     strplayer2check = ("exit");
                   }else{
                     chrkey2 = con.getChar ();
                   }
-                
+                  
                 }else if (chrkey2 == '5'){
                   if (intchecklight5 == 0){
                     intchecklight5 = 2;
@@ -363,15 +3450,15 @@ public class Tictactoe{
                   }else{
                     chrkey2 = con.getChar ();
                   }
-                   
+                  
                 }else if (chrkey2 == '6'){
-                    if (intchecklight6 == 0){
+                  if (intchecklight6 == 0){
                     intchecklight6 = 2;
                     strplayer2check = ("exit");
                   }else{
                     chrkey2 = con.getChar ();
                   }
-                
+                  
                 }else if (chrkey2 == '1'){
                   if (intchecklight1 == 0){
                     intchecklight1 = 2;
@@ -381,13 +3468,13 @@ public class Tictactoe{
                   }
                   
                 }else if (chrkey2 == '2'){
-                   if (intchecklight2 == 0){
+                  if (intchecklight2 == 0){
                     intchecklight2 = 2;
                     strplayer2check = ("exit");
-                   }else{
+                  }else{
                     chrkey2 = con.getChar ();
-                   }
-                   
+                  }
+                  
                 }else if (chrkey2 == '3'){
                   if (intchecklight3== 0){
                     intchecklight3 = 2;
@@ -400,81 +3487,84 @@ public class Tictactoe{
               strplayer2check= ("blah");
               
               con.clear();
-              con.println("Turn "+strusername1);
+              con.println("Turn "+strusername1+"  O");
               con.drawLine(400,290,1000,290);
               con.drawLine(400,490,1000,490);
               con.drawLine(600,90,600,690);
               con.drawLine(800,90,800,690);
               
-              if (intchecklight7 = 1){
+              if (intchecklight7 == 1){
                 con.drawOval(425,115,150,150);
               }
-              if (intchecklight8 = 1){
+              if (intchecklight8 == 1){
                 con.drawOval(625,115,150,150);
-               } 
-              if (intchecklight9 = 1){
+              } 
+              if (intchecklight9 == 1){
                 con.drawOval(825,115,150,150);
               }
-              if (intchecklight4 = 1){
+              if (intchecklight4 == 1){
                 con.drawOval(425,315,150,150);
               }
-              if (intchecklight5 = 1){
+              if (intchecklight5 == 1){
                 con.drawOval(625,315,150,150);
               }
-              if (intchecklight6 = 1){
+              if (intchecklight6 == 1){
                 con.drawOval(825,315,150,150);
               }
-              if (intchecklight1 = 1){
-                con.drawOval(425,515,150,150);  
+              if (intchecklight1 == 1){
+                con.drawOval(425,515,150,150);
               }
-              if (intchecklight2 = 1){
+              if (intchecklight2 == 1){
                 con.drawOval(625,515,150,150);
               }
-              if (intchecklight3 = 1){
+              if (intchecklight3 == 1){
                 con.drawOval(825,515,150,150);
               }
               
-            
-            
-                if (intchecklight7 = 2){
+              
+              
+              if (intchecklight7 == 2){
                 con.drawLine(425,115,575,265);
                 con.drawLine(575,115,425,265);
               }
-              if (intchecklight8 = 2){
+              if (intchecklight8 == 2){
                 con.drawLine(625,115,775,265);
                 con.drawLine(775,115,625,265);
               } 
-              if (intchecklight9 = 2){
+              if (intchecklight9 == 2){
                 con.drawLine(825,115,975,265);
                 con.drawLine(975,115,825,265);
               }
-              if (intchecklight4 = 2){
+              if (intchecklight4 == 2){
                 con.drawLine(425,315,575,465);
                 con.drawLine(575,315,425,465);
               }
-              if (intchecklight5 = 2){
+              if (intchecklight5 == 2){
                 con.drawLine(625,315,775,465);
                 con.drawLine(775,315,625,465);
               }
-              if (intchecklight6 = 2){
+              if (intchecklight6 == 2){
                 con.drawLine(825,315,975,465);
                 con.drawLine(975,315,825,465);
               }
-              if (intchecklight1 = 2){
+              if (intchecklight1 == 2){
                 con.drawLine(425,515,575,665);
                 con.drawLine(575,515,425,665);
               }
-              if (intchecklight2 = 2){
+              if (intchecklight2 == 2){
                 con.drawLine(625,515,775,665);
                 con.drawLine(775,515,625,665);
               }
-              if (intchecklight3 = 2){
+              if (intchecklight3 == 2){
                 con.drawLine(825,515,975,665);
                 con.drawLine(975,515,825,665);
               }
-            
-              if (intchecklight7 = 1&& intchecklight8 = 1 &&intchecklight9 = 1){
-                intscorep1=intscore+1;
+              
+              
+              
+              if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
                 con.clear();
                 con.println("");
                 con.println("");
@@ -492,73 +3582,911 @@ public class Tictactoe{
                 con.println("");
                 con.println("                                                                        "+strusername1+" win");
                 con.println("                                                                             score: "+intscorep1);
-                str2playergameloop1=("end game");
-              }
-               
-               
-               
-              chrkey1 = con.getChar ();
-            }
+                str2playergameloop2=("end game");
+              }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                intscorep1=intscorep1+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername1+" win");
+                con.println("                                                                             score: "+intscorep1);
+                str2playergameloop2=("end game");
+              }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                        "+strusername2+" win");
+                con.println("                                                                             score: "+intscorep2);
+                str2playergameloop2=("end game");
+              }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                intscorep2=intscorep2+1;
+                pause(5000);
+                con.clear();
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("");
+                con.println("                                                                                    Tie");
+                str2playergameloop2=("end game");
+              }else{
                 
-          
-          
-          
-          
-          
-          }else if(intrandturn == 2){
-            con.clear();
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("");
-            con.println("                                                                        "+strusername2+"'s turn (your x)");
-            pause(2000);
-            con.clear();
-            con.println("Turn "+strusername2);
-            con.drawLine(400,290,1000,290);
-            con.drawLine(400,490,1000,490);
-            con.drawLine(600,90,600,690); 
-            con.drawLine(800,90,800,690);
-            chrkey2 = con.getChar ();
-          
-          
+                
+                
+                
+                chrkey1 = con.getChar ();
+                
+                
+                while (strplayer1check.equals("blah")){
+                  if (chrkey1 == '7'){
+                    if (intchecklight7 == 0){
+                      intchecklight7 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '8'){
+                    if (intchecklight8 == 0){
+                      intchecklight8 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '9'){
+                    if (intchecklight9 == 0){
+                      intchecklight9 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '4'){
+                    if (intchecklight4 == 0){
+                      intchecklight4 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '5'){
+                    if (intchecklight5 == 0){
+                      intchecklight5 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '6'){
+                    if (intchecklight6 == 0){
+                      intchecklight6 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '1'){
+                    if (intchecklight1 == 0){
+                      intchecklight1 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '2'){
+                    if (intchecklight2 == 0){
+                      intchecklight2 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                    
+                  }else if (chrkey1 == '3'){
+                    if (intchecklight3== 0){
+                      intchecklight3 = 1;
+                      strplayer1check = ("exit");
+                    }else{
+                      chrkey1 = con.getChar ();
+                    }
+                  }
+                }
+                strplayer1check= ("blah");
+                
+                con.clear();
+                con.println("Turn "+strusername2+"  X");
+                con.drawLine(400,290,1000,290);
+                con.drawLine(400,490,1000,490);
+                con.drawLine(600,90,600,690);
+                con.drawLine(800,90,800,690);
+                
+                if (intchecklight7 == 1){
+                  con.drawOval(425,115,150,150);
+                }
+                if (intchecklight8 == 1){
+                  con.drawOval(625,115,150,150);
+                } 
+                if (intchecklight9 == 1){
+                  con.drawOval(825,115,150,150);
+                }
+                if (intchecklight4 == 1){
+                  con.drawOval(425,315,150,150);
+                }
+                if (intchecklight5 == 1){
+                  con.drawOval(625,315,150,150);
+                }
+                if (intchecklight6 == 1){
+                  con.drawOval(825,315,150,150);
+                }
+                if (intchecklight1 == 1){
+                  con.drawOval(425,515,150,150);  
+                }
+                if (intchecklight2 == 1){
+                  con.drawOval(625,515,150,150);
+                }
+                if (intchecklight3 == 1){
+                  con.drawOval(825,515,150,150);
+                }
+                
+                
+                
+                if (intchecklight7 == 2){
+                  con.drawLine(425,115,575,265);
+                  con.drawLine(575,115,425,265);
+                }
+                if (intchecklight8 == 2){
+                  con.drawLine(625,115,775,265);
+                  con.drawLine(775,115,625,265);
+                } 
+                if (intchecklight9 == 2){
+                  con.drawLine(825,115,975,265);
+                  con.drawLine(975,115,825,265);
+                }
+                if (intchecklight4 == 2){
+                  con.drawLine(425,315,575,465);
+                  con.drawLine(575,315,425,465);
+                }
+                if (intchecklight5 == 2){
+                  con.drawLine(625,315,775,465);
+                  con.drawLine(775,315,625,465);
+                }
+                if (intchecklight6 == 2){
+                  con.drawLine(825,315,975,465);
+                  con.drawLine(975,315,825,465);
+                }
+                if (intchecklight1 == 2){
+                  con.drawLine(425,515,575,665);
+                  con.drawLine(575,515,425,665);
+                }
+                if (intchecklight2 == 2){
+                  con.drawLine(625,515,775,665);
+                  con.drawLine(775,515,625,665);
+                }
+                if (intchecklight3 == 2){
+                  con.drawLine(825,515,975,665);
+                  con.drawLine(975,515,825,665);
+                }
+                
+                
+                
+                
+                if (intchecklight7 == 1&& intchecklight8 == 1 &&intchecklight9 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight4 == 1&& intchecklight5 == 1 &&intchecklight6 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight1 == 1&& intchecklight2 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight4 == 1 &&intchecklight1 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight8 == 1&& intchecklight5 == 1 &&intchecklight2 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight6 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 1&& intchecklight5 == 1 &&intchecklight3 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 1&& intchecklight5 == 1 &&intchecklight1 == 1){
+                  intscorep1=intscorep1+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight8 == 2 &&intchecklight9 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight4 == 2&& intchecklight5 == 2 &&intchecklight6 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight1 == 2&& intchecklight2 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight4 == 2 &&intchecklight1 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight8 == 2&& intchecklight5 == 2 &&intchecklight2 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername1+" win");
+                  con.println("                                                                             score: "+intscorep1);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight6 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 == 2&& intchecklight5 == 2 &&intchecklight3 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight9 == 2&& intchecklight5 == 2 &&intchecklight1 == 2){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                        "+strusername2+" win");
+                  con.println("                                                                             score: "+intscorep2);
+                  str2playergameloop1=("end game");
+                }else if (intchecklight7 != 0&& intchecklight8 != 0 &&intchecklight9 != 0&&intchecklight4 != 0&& intchecklight5 != 0 &&intchecklight6 != 0&&intchecklight1 != 0&& intchecklight2 != 0 &&intchecklight3 != 0){
+                  intscorep2=intscorep2+1;
+                  pause(5000);
+                  con.clear();
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("");
+                  con.println("                                                                                    Tie");
+                  str2playergameloop1=("end game");
+                }else{
+                  chrkey2 = con.getChar ();
+                }
+              }
+            }
+            
           }
-        con.clear();
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("");
-        con.println("                                                                                       click k to play again");
-        con.println("                                                                                         click b to go back");
-        chrkey = con.getChar ();
-        if (chrkey == 'k'){
-          strrestartgame2p = ("restart");
-        }else if (chrkey== 'b'){
-          strrestartgame2p = ("blah");
-        } 
-      }
-        
-        
+          pause(5000);
+          while (strrestartgame2ploop.equals ("blah")){
+            strplayer1check= ("blah");
+            strplayer2check= ("blah");
+            str2playergameloop1=("blah");
+            str2playergameloop2=("blah");
+            intchecklight7=0;
+            intchecklight8=0;
+            intchecklight9=0;
+            intchecklight4=0;
+            intchecklight5=0;
+            intchecklight6=0;
+            intchecklight1=0;
+            intchecklight2=0;
+            intchecklight3=0;
+            con.clear();
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("");
+            con.println("                                                                                       click k to play again");
+            con.println("                                                                                     click b to go backto menu");
+            chrkey = con.getChar ();
+            if (chrkey == 'k'){
+              strrestartgame2p = ("restart");
+              strrestartgame2ploop= ("end");
+            }else if (chrkey== 'b'){
+              strrestartgame2p = ("blah");
+              strrestartgame2ploop= ("end");
+              intscorep1=0;
+              intscorep2=0; 
+            } 
+          }
+        }
+
         
         
         
@@ -664,9 +4592,9 @@ public class Tictactoe{
           con.println("                                                                                     TIC-TAC-TOE");
           con.println("                                                                                         ");
           con.println("                                                                                    BY:Brian Kong");
-          con.println("                                                                                     Version 0.01");
+          con.println("                                                                                      Version 1");
           con.println("                                                                                Date created:11/04/2017");
-          con.println("                                                                                Date updated:12/04/2017");
+          con.println("                                                                                Date updated:25/04/2017");
           con.println("");
           con.println("");
           con.println("");
@@ -739,7 +4667,7 @@ public class Tictactoe{
             con.clear();
           }
         }
-      strcredits=("blah");
+        strcredits=("blah");
       }
       con.clear();
     }
